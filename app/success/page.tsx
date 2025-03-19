@@ -58,7 +58,7 @@ function SuccessPage() {
 
           {/* Action Buttons */}
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-            <Button onClick={() => router.push('/')} className="flex items-center justify-center px-6 py-3 border border-gray-300 rounded-lg text-gray-700 hover:bg-gray-50 transition-colors">
+            <Button onClick={() => router.push('/')} className="flex items-center cursor-pointer bg-white justify-center px-6 py-3 border border-gray-300 rounded-lg text-gray-700 hover:bg-gray-50 transition-colors">
               <Home className="h-5 w-5 mr-2" />
               Return to Home
             </Button>
