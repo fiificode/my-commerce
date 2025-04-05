@@ -1,9 +1,8 @@
 import { getProductById } from "@/actions/product";
+import BackButton from "@/app/components/BackButton";
 import ProductAction from "@/app/components/product/ProductAction";
 import ProductQuantity from "@/app/components/product/ProductQuantity";
-import { Button } from "@/components/ui/button";
 import Image from "next/image";
-import Link from "next/link";
 import React from "react";
 
 type Props = {
@@ -18,12 +17,7 @@ const ProdductDetailsPage = async ({ params: { id } }: Props) => {
   return (
     <div className="min-h-screen">
       <div className="container mx-auto px-4 py-6">
-        <Link
-          href="/"
-          className="inline-flex items-center text-lg font-medium mb-6 hover:text-gray-600"
-        >
-          Back
-        </Link>
+        <BackButton />
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
           <div className="lg:col-span-2 flex flex-col gap-6">
             {product.images[0].src && (

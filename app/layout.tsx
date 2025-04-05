@@ -1,12 +1,6 @@
 import type { Metadata } from "next";
 import "./globals.css";
-import { DM_Mono } from "next/font/google";
-import CartProvider from "@/providers/cart-context";
-
-const dmmono = DM_Mono({
-  weight: ["400"],
-  subsets: ["latin"],
-});
+import PageClient from "./pageClient";
 
 export const metadata: Metadata = {
   title: "Create Next App",
@@ -18,15 +12,5 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
-  return (
-    <html lang="en" suppressHydrationWarning>
-      <body
-        className={`${dmmono.className} antialiased`}
-      >
-        <CartProvider>
-        {children}
-        </CartProvider>
-      </body>
-    </html>
-  );
+  return <PageClient>{children}</PageClient>;
 }
